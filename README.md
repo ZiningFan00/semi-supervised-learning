@@ -1,2 +1,2 @@
 # semi-supervised-learning
-plot_result file is the file to plot the result in our report.
+Project of COMS4995 Deep Learning
