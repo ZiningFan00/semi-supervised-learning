@@ -135,7 +135,8 @@ def get_ladder_network_fc(layer_sizes=[784, 1000, 500, 250, 250, 250, 10],
     tr_m = Model([inputs_l, inputs_u], y_c_l)
     tr_m.add_loss(u_cost)
     tr_m.compile(keras.optimizers.Adam(lr=0.02 ), 'categorical_crossentropy', metrics=['accuracy'])
-
+    
+    tr_m.metrics_tensors = []
     tr_m.metrics_names.append("den_loss")
     tr_m.metrics_tensors.append(u_cost)
 
